@@ -12,14 +12,11 @@ Generate satirical "ragebait" math formulas that connect famous constants (φ, �
 ## Usage
 
 ```bash
-# Generate a formula
+# Generate a formula (outputs LaTeX)
 node scripts/generate-slop.js
 
 # Generate multiple
 node scripts/generate-slop.js --count 5
-
-# Render to PNG (requires curl)
-node scripts/generate-slop.js | ./scripts/render-quicklatex.sh output.png
 ```
 
 ## How It Works
@@ -29,6 +26,12 @@ The generator creates formulas by:
 - Multiplying by ones: `e^0`, `i⁴`, `sin²θ+cos²θ`, `ln(e)`
 - Same operation both sides: `a/φ = b/φ`
 - Connecting unrelated constants through trivial identities
+
+## Rendering
+
+Output is LaTeX. Render with any LaTeX tool:
+- Online: latex.codecogs.com, quicklatex.com
+- Local: pdflatex, mathjax, katex
 
 ## Installation
 
